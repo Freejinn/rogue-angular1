@@ -1,0 +1,43 @@
+.container-fluid {
+  width: 90%;
+  padding-left: 10px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.carousel {
+    width:100%;
+    min-width: 450px;
+}
+
+p {
+  font-size: 22px;
+}
+
+h5 {
+    /* color: #e62a0f; */
+    color: #fff;
+    text-align: center;
+    background-color: #212529;
+    padding: 10px;
+  }
+
+.emphasis {
+  font-weight: 700;
+  color: rgb(70, 69, 69);
+}
+
+#different {
+  color: rgb(219, 31, 17);
+}
+
+@media (max-width: 800px) {
+  .container-fluid {
+    flex-direction: column;
+  }
+  .carousel {
+    min-width: 100px;
+}
+
+}
