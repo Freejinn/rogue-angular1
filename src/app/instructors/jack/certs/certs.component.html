@@ -1,3 +1,44 @@
+<h2 mat-dialog-title>Certifications</h2>
 <mat-dialog-content class="mat-typography">
-    certs works!
+    <br>
+  <h2>Martial Arts</h2>
+  <div class="container-fluid" >
+    <div class="row" *ngFor="let cert of certs">
+      <div class="column" >
+        <mat-card>
+          <mat-card-header>{{cert.header}}</mat-card-header>
+          <img [src]="cert.imgPath" />
+          <mat-card-footer>{{cert.footer}}</mat-card-footer>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  <h2>Boxing</h2>
+  <ul>
+    <li>
+      USA Boxing (Governing Organization of the Olympics), Level 1
+      (2007-current)
+    </li>
+  </ul>
+
+  <h2>Violence Prevention</h2>
+
+  <ul>
+    <li>Nicoletti-Flater Violence (2013)</li>
+    <li>
+      Crisis Prevention Institute non-violence crisis intervention (2005-2013)
+    </li>
+    <li>Pro-ACT professional assault crisis training (2007-2008)</li>
+    <li>Therapeutic Crisis Intervention (2003-2005)</li>
+    <li>HWC (Handle With Care) crisis intervention (1999-2001)</li>
+  </ul>
+
+  <h2>Coaching</h2>
+  <ul>
+    <li>NFHS Coaching Certification (2011-2012)</li>
+    <li>Safe Sport training USA Boxing (2017-present)</li>
+  </ul>
 </mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>

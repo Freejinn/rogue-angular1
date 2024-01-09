@@ -1,28 +1,74 @@
+<div class="line"></div>
+
 <div class="inst-body">
-    <h4>Advanced-Phase Instructors</h4>
+    <h2>Advanced-Phase Instructors</h2>
         <div class="line2"></div>
-        <div class="inst-group">
-            <div class="instructor">
-                <img id="instr-image" src="" alt="" width="200px">
-                <p></p>
+        <div class="inst-group" >
+            <div class="instructor" *ngFor="let advInst of advInstructor$ |async; let i = index">
+                <img id="instr-image" [src]="advInst.imgPath" alt="" width="200px">
+                <h2 id="inst-name"><a data-bs-toggle="modal" [attr.data-bs-target]="'#advModal' +i">
+                    {{ advInst.firstName }} {{ advInst.lastName }}</a></h2>
+                <!-- Modal -->
+          <div class="modal fade" [attr.id]="'advModal' +i" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" id="exampleModalLabel">
+                    {{advInst.firstName}} {{advInst.lastName}}: {{advInst.location}}</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  {{advInst.blurb}}
+                </div>
+                <div class="modal-footer">
+                    <div id="contact"><h4> {{advInst.contact}} </h4></div>
+                </div>
+              </div>
+            </div>
+          </div>
             </div>
         </div>
+       
+        
+        
+    
+
         <div class="line2"></div>
-        <h4>Intermidiate-Phase Instructors</h4>
+        <h2>Intermidiate-Phase Instructors</h2>
         <div class="line2"></div>
         <div class="inst-group">
-            <div class="instructor">
-                <img id="instr-image" src="" alt="" width="200px">
-                <p></p>
+            <div class="instructor" *ngFor="let intInst of intInstructor$ | async; let i = index">
+                <img id="instr-image" [src]="intInst.imgPath" alt="" width="200px">
+                <h2 id="inst-name"><a data-bs-toggle="modal" [attr.data-bs-target]="'#intModal' + i">{{ intInst.firstName }} {{ intInst.lastName }}</a></h2>
+                <!-- Modal -->
+          <div class="modal fade" [attr.id]="'intModal' + i" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" id="exampleModalLabel">{{intInst.firstName}} {{intInst.lastName}}: {{intInst.location}}</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  {{intInst.blurb}}
+                </div>
+                <div class="modal-footer">
+                    <div id="contact"><h4> {{intInst.contact}} </h4></div>
+                </div>
+              </div>
+            </div>
+          </div>
             </div>
         </div>
+          
+          
+
         <div class="line2"></div>
-    <h4>Apprentice Instructors</h4>
+    <h2>Apprentice Instructors</h2>
         <div class="line2"></div>
         <div class="inst-group">
-            <div class="instructor">
-                <img id="instr-image" src="" alt="" width="200px">
-                <p></p>
+            <div class="instructor" *ngFor="let appInst of appInstructor$ | async">
+                <img id="instr-image" [src]="appInst.imgPath" alt="" width="200px">
+                <h2 id="inst-name"><a (click)="infoOpen()" > {{ appInst.firstName }} {{ appInst.lastName }}</a></h2>
             </div>
         </div>
     </div>

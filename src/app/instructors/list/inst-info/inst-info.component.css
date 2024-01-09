@@ -1,0 +1,11 @@
+* {
+    background-color: white;
+}
+
+h2 {
+    color: black;
+}
+
+.mdc-dialog__title {
+    color: rgb(70, 69, 69);
+}

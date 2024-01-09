@@ -1,0 +1,42 @@
+* {
+    background-color: rgb(193, 190, 190);
+}
+
+p, ul {
+    color: rgb(70, 69, 69);
+    font-size: 14px;
+}
+
+h2 {
+    color: rgb(219, 31, 17);
+}
+
+.mdc-dialog__title {
+    color: rgb(70, 69, 69);
+}
+
+.mdc-card {
+    max-width: 200px;
+}
+
+img {
+    min-height: 150px;
+}
+
+.mat-mdc-card-header, .mat-mdc-card-footer {
+    background-color: black;
+    text-align: center;
+    font-size: 12px;
+    justify-content: center;
+}
+
+.container-fluid {
+    display: flex;   
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.row {
+    margin: 10px;
+}
+

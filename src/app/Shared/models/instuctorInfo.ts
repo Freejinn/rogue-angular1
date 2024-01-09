@@ -4,10 +4,8 @@ export interface Instructor {
     location: string;
     imgPath: string;
     level: string;
-    details: [{
-        blurb: string;
-        contact: string;
-    } ]
+    blurb: string;
+    contact: string;
 }
 
 

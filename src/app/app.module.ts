@@ -15,6 +15,8 @@ import { ListComponent } from './instructors/list/list.component';
 import { JackComponent } from './instructors/jack/jack.component';
 import { CertsComponent } from './instructors/jack/certs/certs.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CommonModule } from '@angular/common';
+import { InstInfoComponent } from './instructors/list/inst-info/inst-info.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     ProgramsComponent,
     AboutComponent,
-    CarouselComponent,    
+    CarouselComponent,
+        
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     JackComponent,
     CertsComponent,
     InstructorsComponent,
-    ListComponent
+    ListComponent,
+    CommonModule,
+    InstInfoComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
