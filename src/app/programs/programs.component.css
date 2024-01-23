@@ -1,0 +1,111 @@
+.emphasis {
+  font-weight: 700;
+  color: rgb(70, 69, 69);
+}
+
+p {
+  font-size: 18px;
+}
+
+.title {
+text-align: center;
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+    background-color: #212529;
+    padding: 15px;
+    margin: 5px;
+    width: 100%;
+  }
+
+h4 {
+  /* margin: 5px; */
+  font-size: 24;
+}
+
+h5 {
+  color: rgb(219, 31, 17);
+  /* margin: 0; */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+li {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.body {
+  width: 90%;
+  padding-left: 10px;
+  margin: auto;
+  font-size: 22px;
+  display: flex;
+}
+
+body > * {
+  flex: 1 1 0;
+}
+
+#adult-pro {
+  margin: 10px;
+  padding: 20px;
+}
+
+.container-fluid {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.container-xxl {
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+ol {
+    background-color: rgb(109, 106, 106);
+    padding: 15px 50px;
+    color: #fff;
+}
+
+.img {
+    margin: 15px;
+}
+
+#adult-class {
+    max-height: 300px;
+    min-height: 140px;
+    min-width: 180px;
+}
+
+.text {
+    margin: 15px;
+}
+
+#kid-pro {
+  margin: 10px;
+  padding: 20px;
+}
+
+#kidpic {
+  border: 5px solid black;
+}
+
+@media (max-width: 800px) {
+    .body, .container-fluid {
+      flex-direction: column;
+    }
+  }
+
+  @media (min-width: 800px) {
+    #adult-class {
+        min-height: 300px;
+        min-width: 227px;
+    }
+  }

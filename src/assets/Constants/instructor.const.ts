@@ -5,7 +5,7 @@ export const instructorConst: Instructor[] = [
     firstName: 'Mike',
     lastName: 'Romables',
     location: 'San Diego, CA',
-    imgPath: 'assets/images/frame.jpg',
+    imgPath: 'assets/images/mike.jpg',
     level: 'advanced',
     blurb: 'he does this and that',
     contact: 'somewhere@somewhere.com',
