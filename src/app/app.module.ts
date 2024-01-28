@@ -17,6 +17,7 @@ import { CertsComponent } from './instructors/jack/certs/certs.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { InstInfoComponent } from './instructors/list/inst-info/inst-info.component';
+import { SignUpComponent } from './Shared/footer/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { InstInfoComponent } from './instructors/list/inst-info/inst-info.compon
     ProgramsComponent,
     AboutComponent,
     CarouselComponent,
+    SignUpComponent,
         
   ],
   imports: [

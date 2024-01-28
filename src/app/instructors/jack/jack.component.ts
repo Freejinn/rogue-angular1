@@ -13,7 +13,7 @@ import { NgFor } from '@angular/common';
 })
 
 export class JackComponent {
-  dialogRef: MatDialogRef<any, any> | undefined;
+  dialogRef: MatDialogRef<any> | undefined;
 
   constructor(public dialog: MatDialog) {}
 
