@@ -1,26 +1,40 @@
 .container-fluid {
-  width: 90%;
-  padding-left: 10px;
-  margin: 20px;
+  padding: 10px;
+  margin: 30px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .carousel {
-    width:100%;
-    min-width: 450px;
+    width: 100%;
+    min-width: 400px !important;
+    margin-bottom: 15px;
+}
+
+.text {
+  width: 80%;
+  justify-content: center;
 }
 
 p {
-  font-size: 20px;
+  font-size: 25px;
 }
 
-h2 {
-    color: #fff;
+h1 {
+    color: #212529;
     text-align: center;
-    background-color: #212529;
-    padding: 15px;
-    margin: 0;
+    font-size: 35px;
+    line-height: 65px;
+    padding: 10px;
+  }
+
+  .banner {
+    background-color: #F0EDE8;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 30px;
   }
 
 .emphasis {
@@ -36,8 +50,9 @@ h2 {
   .container-fluid {
     flex-direction: column;
   }
-  .carousel {
-    min-width: 100px;
-}
+  
+  .banner {
+    flex-direction: column;
+  }
 
 }
