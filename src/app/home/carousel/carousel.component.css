@@ -1,17 +1,14 @@
+.pics {
+    min-width: 550px;
+    max-width: 550px;
+}
+
+@media (max-width:650px) {
+    .pics {
+        min-width: 200px;
+    }
+}
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    max-width: 550px;
+    margin: 20px;
 }
-.carousel-container {
-    margin-top: 15px;
-    max-width: 475px;
-}
-
-.carousel-item {
-    transition-duration: .6s;
-    transition-timing-function: ease-in-out;
-    transition-delay: 0s;
-    transition-property: transform;
-}
-

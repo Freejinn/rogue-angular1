@@ -1,6 +1,60 @@
 .emphasis {
   font-weight: 700;
-  color: rgb(70, 69, 69);
+  /* color: rgb(70, 69, 69); */
+  color: #F0EDE8;
+  justify-content: center;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  border: solid #F0EDE8;
+}
+
+.material-symbols-outlined {
+  font-size: 40px;
+  /* color: #F0EDE8; */
+  color:rgb(70, 69, 69);
+  margin: 10px;
+}
+
+.emphasis2 {
+  font-weight: 700;
+  font-size: larger;
+}
+
+#boudaries {
+  text-align: start;
+  font-size: 30px;
+}
+
+#respect {
+  text-align: end;
+  font-size: 30px;
+}
+
+#safety {
+  text-align: start;
+  font-size: 30px;
+}
+
+#focus {
+  font-size: 30px;
+}
+
+#attention {
+  text-align: center;
+  font-size: 30px;
+}
+
+#ethic {
+  text-align: start;
+  font-size: 30px;
+}
+
+#growth {
+  font-size: 30px;
 }
 
 p {
@@ -11,8 +65,9 @@ p {
 text-align: center;
 }
 
-h2 {
-    color: #fff;
+#program-title {
+  font-size: 40px;
+    color: #F0EDE8;
     text-align: center;
     background-color: #212529;
     padding: 15px;
@@ -21,16 +76,26 @@ h2 {
   }
 
 h4 {
-  /* margin: 5px; */
   font-size: 24;
+}
+
+#tag-line {
+  color: rgb(219, 31, 17);
+  font-weight: bold;
 }
 
 h5 {
   color: rgb(219, 31, 17);
-  /* margin: 0; */
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }
+
+p {
+  font-size: 20px;
+  padding: 20px;
+}
+
+
 
 li {
   font-size: 18px;
@@ -42,55 +107,62 @@ li {
   padding-left: 10px;
   margin: auto;
   font-size: 22px;
-  display: flex;
 }
 
 body > * {
   flex: 1 1 0;
 }
 
-#adult-pro {
-  margin: 10px;
-  padding: 20px;
-}
-
 .container-fluid {
     display: flex;
     align-items: center;
     margin: 10px;
+    /* width: 85%; */
 }
+
+.class-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+#class-text {
+  line-height: 40px;
+  font-size: 30px;
+}
+
 
 .container-xxl {
     text-align: center;
 }
 
-ul {
+.list-box {
+  display: flex;
+  justify-content: center;}
+
+#kid-focus {
+    background-color: rgb(109, 106, 106);
+    color: #fff;
+    padding: 40px;
     list-style: none;
+    width: 85%;
+    text-align: end;
+    line-height: 40px;
 }
 
-ol {
-    background-color: rgb(109, 106, 106);
-    padding: 15px 50px;
-    color: #fff;
+ul {
+  list-style: none;
 }
 
 .img {
     margin: 15px;
-}
-
-#adult-class {
-    max-height: 300px;
-    min-height: 140px;
-    min-width: 180px;
+    max-width: 400px;
 }
 
 .text {
     margin: 15px;
-}
-
-#kid-pro {
-  margin: 10px;
-  padding: 20px;
+    width: 85%;
 }
 
 #kidpic {
@@ -98,7 +170,7 @@ ol {
 }
 
 @media (max-width: 800px) {
-    .body, .container-fluid {
+    .body, .container-fluid, .class-container {
       flex-direction: column;
     }
   }

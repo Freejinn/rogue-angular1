@@ -1,19 +1,11 @@
 .container-fluid {
-  padding: 10px;
-  margin: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.carousel {
-    width: 100%;
-    min-width: 300px !important;
-    margin-bottom: 15px;
-}
-
 .text {
-  width: 80%;
+  width: 75%;
   justify-content: center;
 }
 
@@ -26,7 +18,9 @@ h1 {
     text-align: center;
     font-size: 35px;
     line-height: 65px;
-    padding: 10px;
+    padding: 15px;
+    width:85%;
+
   }
 
   .banner {
@@ -34,8 +28,11 @@ h1 {
     display: flex;
     align-items: center;
     flex-direction: row;
-    padding: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding: 10px;
   }
+
 
 .emphasis {
   font-weight: 700;
@@ -46,10 +43,11 @@ h1 {
   color: rgb(219, 31, 17);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .container-fluid {
     flex-direction: column;
-  }
+  } 
+
   
   .banner {
     flex-direction: column;
