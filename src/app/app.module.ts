@@ -18,6 +18,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { InstInfoComponent } from './instructors/list/inst-info/inst-info.component';
 import { SignUpComponent } from './Shared/footer/sign-up/sign-up.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +32,7 @@ import { SignUpComponent } from './Shared/footer/sign-up/sign-up.component';
     AboutComponent,
     CarouselComponent,
     SignUpComponent,
+    
         
   ],
   imports: [
@@ -41,7 +45,9 @@ import { SignUpComponent } from './Shared/footer/sign-up/sign-up.component';
     InstructorsComponent,
     ListComponent,
     CommonModule,
-    InstInfoComponent
+    InstInfoComponent,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

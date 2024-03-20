@@ -3,8 +3,7 @@ import { Observable, filter, toArray } from 'rxjs';
 import { InstructorListService } from 'src/app/Shared/Services/list.service';
 import { Instructor } from 'src/app/Shared/models/instuctorInfo';
 import { CommonModule, NgFor } from '@angular/common';
-import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { InstInfoComponent } from './inst-info/inst-info.component';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 
 @Component({
@@ -38,13 +37,5 @@ export class ListComponent {
     filter((instructor)=>instructor.level === 'apprentice'), toArray()
   );
 
-  infoOpen(): void {
-    this.dialogRef = this.dialog.open(InstInfoComponent, {
-      maxWidth: '80vw',
-      maxHeight: '83.25vh',
-      data: {
-        
-      }
-    });
-  }
+
 }

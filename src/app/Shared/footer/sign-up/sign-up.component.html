@@ -1,21 +1,59 @@
 <div id="backdrop"></div>
-<form action="https://formsubmit.co/noonfirerebel@gmail.com" method="POST">
-        <div class="modal_content">
-            <p>Sign up for a FREE 30-min private lesson. Fill out your name and tell us a bit about your training goals.</p>
-            <label for="name">Name</label>
-            <input type="text" id="name" required>
-            <label for="email">Email</label>
-            <input type="text" id="email" required>
-            <label for="info">Goals, Interests, Questions</label>
-            <div class="expandingArea">
-            <textarea id="text-area"></textarea>                    
-            </div>
-        </div>
-        <div class="modal__actions">
-            <button id="close-btn">X</button>
-            <button class="button" id="clear-btn">Clear</button>
-            <button class="button" type="submit" id="submit-btn">Submit</button>
-            <input type="hidden" name="_next" value="https://yourdomain.co/thanks.html">
-        </div>
-    </form>
-  
+<form
+  class="gform"
+  method="post"
+  [formGroup]="emailForm"
+  (ngSubmit)="submitForm()"
+>
+  <div class="modal_content">
+    <p>
+      Sign up for a FREE 30-min private lesson. Fill out your name and tell us a
+      bit about your training goals.
+    </p>
+
+    <div class="form-group">
+      <label for="user-name">Name</label>
+      <input
+        type="text"
+        id="user-name"
+        formControlName="userName"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="text"
+        id="email"
+        formControlName="email"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="message">Goals, Interests, Questions</label>
+      <div class="expandingArea">
+        <textarea
+          id="text-area"
+          type="text"
+          class="form-control"
+          formControlName="message"
+          required
+          [(ngModel)]="value"
+        ></textarea>
+      </div>
+    </div>
+  </div>
+
+  <div [ngClass]="!submitted ? 'hidden' : 'visible'" class="center-text">
+    <span>{{ responseMessage }}</span>
+  </div>
+
+  <div class="modal__actions">
+    <button id="close-btn" (click)="onClick()">X</button>
+    <button *ngIf="value" class="button" id="clear-btn" (click)="value=''">Clear</button>
+    <button class="submit" type="submit" id="submit-btn">Submit</button>
+  </div>
+
+</form>

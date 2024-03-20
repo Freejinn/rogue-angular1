@@ -65,9 +65,26 @@
     <h2>Apprentice Instructors</h2>
         <div class="line2"></div>
         <div class="inst-group">
-            <div class="instructor" *ngFor="let appInst of appInstructor$ | async">
+            <div class="instructor" *ngFor="let appInst of appInstructor$ | async let i=index">
                 <img id="instr-image" [src]="appInst.imgPath" alt="" width="200px">
-                <h2 id="inst-name"><a (click)="infoOpen()" > {{ appInst.firstName }} {{ appInst.lastName }}</a></h2>
+                <h2 id="inst-name"><a data-bs-toggle="modal" [attr.data-bs-target]="'#appModal' + i"> {{ appInst.firstName }} {{ appInst.lastName }}</a></h2>
+                <!-- Modal -->
+          <div class="modal fade" [attr.id]="'appModal' + i" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title" id="exampleModalLabel">{{appInst.firstName}} {{appInst.lastName}}: {{appInst.location}}</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  {{appInst.blurb}}
+                </div>
+                <div class="modal-footer">
+                    <div id="contact"><h4> {{appInst.contact}} </h4></div>
+                </div>
+              </div>
+            </div>
+          </div>
             </div>
         </div>
     </div>
